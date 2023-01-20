@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+
+<!--Hier wurde das CSS verlinkt-->
+
+<link rel="stylesheet" href="../css/stylesheet.css"/> 
+
+<body>
+
+<!--Hier wurde der Container erstellt, auf dem die Inputs sind-->
+    <div class="container">
+        <div class="header">
+            <h2>Login Page</h2>
+        </div>
+
+    
+        <form id="form" class="form">
+
+<!--Hier ist das E-Mail Input Feld-->
+           
+            <div class="form-control">
+                <label for="username">Email</label>
+                <input type="email" placeholder="email@gmail.com" id="email" autocomplete="off"/>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Bitte geben Sie eine gültige E-Mail-Adresse ein</small>
+            </div>
+ 
+<!--Hier ist das Passwort Input Feld-->
+
+            <div class="form-control">
+                <label for="username">Passwort</label>
+                <input type="password" placeholder="Passwort" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    title="Muss mind. 8 Zeichen, ein Gross- und Kleinbuchstaben und ein Sonderzeichen enthalten" oninput="strengthChecker()"/>
+                <small>Bitte geben Sie Ihr Passwort ein</small>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <div id="strength-bar"></div>   
+            </div>
+            
+            <p id="msg"></p>
+
+<!--Hier der Submit Login Button, dieser sorgt dafür das die Eingabe nach dem einreichten geprüft wird-->
+
+            <button id="submit-button">Login</button>
+        </form>
+    </div>
+   
+<!--Hier das verlinkte Javascript-->
+
+    <script src="../js/javascript.js"></script>
+    
+</body>
+
+</html>
